@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black_overlay" >
+
+        <ImageButton
+            android:id="@+id/ReturnBtnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="onReturn"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_back_button" />
+
+        <TextView
+            android:id="@+id/ConnectStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Flight Tester"
+            android:textColor="@android:color/white"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title_rl"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true" />
+        <!--android:layout_above="@+id/linearLayout"-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+        <ToggleButton
+            android:id="@+id/btn_gyro"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:text="Gyro"
+            android:textOff="Gyro Off"
+            android:textOn="Gyro On"
+            android:textSize="12sp"/>
+
+        <ToggleButton
+            android:id="@+id/btn_stream"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Start Stream"
+            android:textOff="Start Stream"
+            android:textOn="Stop Stream"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textSize="12dp"
+            android:checked="false" />
+
+    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/gyro_info"
+        android:layout_width="150dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/video_previewer_surface"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
